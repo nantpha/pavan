@@ -1,0 +1,74 @@
+<div class="jumbotron text-center">
+	<h1 class="display-5">
+		Sample
+	</h1>
+</div>
+<div class="col-md-4"style="float:right;">
+    <a [routerLink]="'/save'">Add new Record</a>
+</div>
+<div class="container">
+	<div class="row custom-wrapper">
+		<div class="col-md-12">
+
+			<!-- Form starts -->
+			<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+				<div class="group-gap">
+					<div class="d-block my-3">
+
+						<div class="mb-3">
+							<select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+								<option value="">Select Option to view </option>
+								<option *ngFor="let city of option" [ngValue]="city">{{city}}</option>
+							</select>
+
+							<!-- error block -->
+							<div class="invalid-feedback" *ngIf="isSubmitted && cityName.errors?.required">
+								<sup>*</sup>Please enter your city name
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</form><!-- Form ends -->
+
+		</div>
+	</div>
+</div>
+
+<div class="container"  (ngSubmit)="onSubmit()">
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th >Code</th>
+				<th>Name</th>
+				<th>Price</th>
+                <th>Action</th>
+                <span class="btn btn-primary" (click)="addRow()">+</span>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr *ngFor="let obj of dynamicArray ;let i=index">
+
+				<td >
+					<input type="text" class="form-control" name="{{obj.OptionSet}}"
+						[ngModelOptions]="{standalone: true}" [(ngModel)]="obj.OptionSet">
+				</td>
+				<td >
+					<input type="text" class="form-control" name="{{obj.from}}" [ngModelOptions]="{standalone: true}"
+						[(ngModel)]="obj.from">
+				</td>
+				<td >
+					<input type="text" class="form-control" name="{{obj.to}}" [ngModelOptions]="{standalone: true}"
+						[(ngModel)]="obj.to">
+				</td>
+				<td >
+					<input type="text" class="form-control" name="{{obj.montly}}" [ngModelOptions]="{standalone: true}"
+						[(ngModel)]="obj.montly">
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>

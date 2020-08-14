@@ -1,47 +1,79 @@
-.style {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    /* font-family : inherit; */
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .style td, .style th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .style tr:nth-child(even)
-  {background-color: #f2f2f2;}
-  
-  .style tr:hover 
-  {background-color: #ddd;}
-  
-  .style th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: orchid;
-    color: white;
-  }
-  
-  input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    width: 50%;
-    padding: 12px 20px ;
-    margin: 0  25% 0 ;  
-    display: inline-block;
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-  
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 500px;
+margin-top: auto;
+margin-bottom: auto;
+width: 600px;
+background-color:#E91E63;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color:#FFC312;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 117px;
+background-color:#FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}

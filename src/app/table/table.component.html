@@ -1,21 +1,61 @@
 <html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<head>
+	<title>Save</title>
+</head>
 <body>
-	<button (click)="addTable()">Add Row</button> <br> <br>
-	<table class="style">
-		<tr>
-			<th>id</th>
-			<th>form</th>
-			<th>to</th>
-			<th></th>
-		</tr>
-		<tr *ngFor="let item of row; let i = index">
-			<td><input type="text" ></td>
-			<td><input type="text" ></td>
-			<td><input type="text"></td>
-			<td> <button (click) = "deleteRow(i)"><i class="fa fa-trash"></i></button></td>
-		</tr>
-	</table>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Percenatge</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span>
+				</div>
+            </div>
+            
+			<div class="card-body">
+				<form [formGroup]="saveForm" (ngSubmit)="onSubmit()">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">OptionSet<i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" formControlName="OptionSet" placeholder="OptionSet">
+						
+                    </div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">From<i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" formControlName="from"  placeholder="from">
+						
+                    </div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">To<i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" formControlName="to"  placeholder="to">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Monthly %<i class="fas fa-key"></i></span>
+						</div>
+						<input type="text" class="form-control" formControlName="montly"   placeholder="montly">
+					</div>
+					
+					<div class="form-group">
+						
+						<input type="submit" value="Save" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+			
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

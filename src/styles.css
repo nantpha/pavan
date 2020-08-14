@@ -205,12 +205,12 @@ label {
 }
 
 .invalid-feedback {
-  color: #E91E63;
+  color: #b38393c5;
 }
 
 .btn-danger,
 body .btn-danger:hover {
-  background: #312BC6;
+  background: #f10e0e;
   border-color: #312BC6;
   color: #4EABE6;
 }
