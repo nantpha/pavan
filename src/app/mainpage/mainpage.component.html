@@ -20,11 +20,6 @@
 								<option value="">Select Option to view </option>
 								<option *ngFor="let city of option" [ngValue]="city">{{city}}</option>
 							</select>
-
-							<!-- error block -->
-							<div class="invalid-feedback" *ngIf="isSubmitted && cityName.errors?.required">
-								<sup>*</sup>Please enter your city name
-							</div>
 						</div>
 
 					</div>
@@ -35,7 +30,7 @@
 	</div>
 </div>
 
-<div class="container"  (ngSubmit)="onSubmit()">
+<div class="container"  (ngSubmit)="onSubmit()" *ngIf="status">
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
